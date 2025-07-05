@@ -34,9 +34,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/yourusername/grid-plus"
+        "url": "https://github.com/Muradley/grid-plus"
     },
-    "homepage": "https://github.com/yourusername/grid-plus#readme",
+    "homepage": "https://github.com/Muradley/grid-plus#readme",
     "keywords": [
         "react",
         "datagrid",
