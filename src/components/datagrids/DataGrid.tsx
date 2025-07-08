@@ -1,21 +1,18 @@
-import {
-    RowVirtualizedTable,
-    type RowVirtualizedTableProps,
-} from './RowVirtualizedTable';
-import type { TableDatasource } from '../../types/DataSourceTypes.ts';
-import type { SortingState } from '@tanstack/react-table';
+import { RowVirtualizedTable } from './RowVirtualizedTable';
+import type {
+    GridOptions,
+    TableDatasource,
+} from '../../types/DataSourceTypes.ts';
+import type { ColumnDef, SortingState } from '@tanstack/react-table';
 import { useInfiniteDataSource } from '@/hooks/useInfiniteDataSource.ts';
 import type { ColumnFiltersState } from '@/types/FilterDataTypes.ts';
 
-export type DataGridProps<TData> = Omit<
-    RowVirtualizedTableProps<TData>,
-    | 'data'
-    | 'totalRows'
-    | 'onVisibleRangeChange'
-    | 'sortModel'
-    | 'onSortModelChange'
-> & {
+export type DataGridProps<TData> = {
     datasource: TableDatasource<TData>;
+    columns: ColumnDef<TData>[];
+    gridOptions?: GridOptions<TData>;
+    columnFilters?: ColumnFiltersState;
+    onColumnFiltersChange?: (filters: ColumnFiltersState) => void;
     cacheBlockSize?: number;
     maxBlocksInCache?: number;
     cacheOverflowSize?: number;
