@@ -8,7 +8,7 @@ GridPlus is built with [shadcn/ui](https://ui.shadcn.dev), which is styled using
 import 'grid-plus/styles.css';
 ```
 
-If you're already using Tailwind and shadcn/ui in your app, GridPlus components will visually integrate — and you can override the theme tokens to match your design system.
+If you're already using Tailwind and shadcn/ui in your app, GridPlus components will visually integrate, and you can override the theme tokens to match your design system.
 
 ## How It Works
 
