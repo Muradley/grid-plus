@@ -78,7 +78,7 @@ Refer to the following sections for detailed documentation on each feature and c
 
 ## Live Examples
 
-Explore live, interactive examples in [Storybook](https://your-deployment-url.com). The following stories are available in the sidebar:
+Explore live, interactive examples in [Storybook](https://muradley.github.io/grid-plus/). The following stories are available in the sidebar:
 - Default configuration
 - Empty data set
 - Multi-column sorting

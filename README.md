@@ -73,7 +73,7 @@ See the [full documentation](./docs/index.md) for usage, customization, and API 
 
 ## Live Examples
 
-Explore interactive demos in [Storybook](https://your-deployment-url.com):
+Explore interactive demos in [Storybook](https://muradley.github.io/grid-plus/):
 
 - Default configuration
 - Filtering with all filter types
