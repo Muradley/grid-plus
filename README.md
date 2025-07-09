@@ -11,6 +11,10 @@
 - Fully typed API with TypeScript support
 - Customizable row and column sizes
 
+## Preview
+
+![GridPlus preview](./docs/datagrid-screenshot.png)
+
 ## Installation
 
 ```bash
