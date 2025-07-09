@@ -5,7 +5,7 @@ GridPlus is built with [shadcn/ui](https://ui.shadcn.dev), which is styled using
 **To use GridPlus's built-in theme, you must import the stylesheet manually:**
 
 ```ts
-import 'grid-plus/styles.css';
+import '@muradley/grid-plus/styles.css';
 ```
 
 If you're already using Tailwind and shadcn/ui in your app, GridPlus components will visually integrate, and you can override the theme tokens to match your design system.

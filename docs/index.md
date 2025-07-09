@@ -24,7 +24,7 @@ Instead of holding all your data in memory, GridPlus expects a data source inter
 ## Installation
 
 ```bash
-npm install grid-plus @tanstack/react-table @tanstack/react-virtual
+npm install @muradley/grid-plus @tanstack/react-table @tanstack/react-virtual
 ```
 
 GridPlus includes precompiled styles. Tailwind CSS is not required in your application unless you want to extend or override styles. See the [Theming guide](./theming.md) to learn how to customize appearance.
@@ -37,7 +37,7 @@ To render correctly, GridPlus must be placed inside a container with a fixed `he
 
 ```tsx
 import { ColumnDef } from '@tanstack/react-table';
-import { DataGrid } from 'grid-plus';
+import { DataGrid } from '@muradley/grid-plus';
 
 type Person = {
   id: number;

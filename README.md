@@ -18,7 +18,7 @@
 ## Installation
 
 ```bash
-npm install grid-plus @tanstack/react-table @tanstack/react-virtual
+npm install @muradley/grid-plus @tanstack/react-table @tanstack/react-virtual
 ```
 
 GridPlus includes precompiled styles. Tailwind CSS is not required unless you want to override default styles. See the [Theming Guide](./docs/theming.md) for customization options.
@@ -40,7 +40,7 @@ Example use cases:
 ## Quick Start
 
 ```tsx
-import { DataGrid } from 'grid-plus';
+import { DataGrid } from '@muradley/grid-plus';
 import type { ColumnDef } from '@tanstack/react-table';
 
 type Person = {
