@@ -3,10 +3,20 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import path from 'path';
 import tailwindcss from '@tailwindcss/vite';
+import dts from 'vite-plugin-dts';
 
-// https://vite.dev/config/
 export default defineConfig({
-    plugins: [react(), tailwindcss()],
+    plugins: [
+        react(),
+        tailwindcss(),
+        dts({
+            insertTypesEntry: true,
+            outDir: 'dist',
+            include: ['src/index.ts'],
+            exclude: ['src/styles/**/*', '**/*.css'],
+            rollupTypes: true,
+        }),
+    ],
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
@@ -19,26 +29,28 @@ export default defineConfig({
                 styles: resolve(__dirname, 'src/styles/index.css'),
             },
             name: 'GridPlus',
+            formats: ['es'],
             fileName: (format, entryName) => {
-                if (entryName === 'styles') {
-                    return `styles.css`;
-                }
-                return `grid-plus.${format}.js`;
+                if (entryName === 'index') return `grid-plus.${format}.js`;
+                return `${entryName}.js`;
             },
         },
+        cssCodeSplit: true,
         rollupOptions: {
-            external: ['react', 'react-dom'],
+            external: [
+                'react',
+                'react-dom',
+                '@tanstack/react-table',
+                '@tanstack/react-virtual',
+            ],
             output: {
                 globals: {
                     react: 'React',
                     'react-dom': 'ReactDOM',
+                    '@tanstack/react-table': 'ReactTable',
+                    '@tanstack/react-virtual': 'ReactVirtual',
                 },
-                assetFileNames: (assetInfo) => {
-                    if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-                        return 'styles.css';
-                    }
-                    return assetInfo.name || 'assets/[name]-[hash][extname]';
-                },
+                assetFileNames: 'styles.css',
             },
         },
         sourcemap: true,

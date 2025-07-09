@@ -1,4 +1,4 @@
-import './styles/index.css';
+import './types/ColumnTypes';
 
 export { DataGrid } from './components/datagrids/DataGrid';
 

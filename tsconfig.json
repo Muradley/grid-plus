@@ -1,13 +1,26 @@
 {
-    "files": [],
-    "references": [
-        { "path": "./tsconfig.app.json" },
-        { "path": "./tsconfig.node.json" }
-    ],
     "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "jsx": "react-jsx",
+        "strict": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist",
+        "skipLibCheck": true,
         "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"]
         }
-    }
+    },
+    "include": ["src"],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.test.ts",
+        "**/*.stories.tsx",
+        "src/styles"
+    ]
 }

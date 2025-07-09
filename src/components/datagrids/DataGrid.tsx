@@ -4,8 +4,8 @@ import type {
     TableDatasource,
 } from '../../types/DataSourceTypes.ts';
 import type { ColumnDef, SortingState } from '@tanstack/react-table';
-import { useInfiniteDataSource } from '@/hooks/useInfiniteDataSource.ts';
-import type { ColumnFiltersState } from '@/types/FilterDataTypes.ts';
+import { useInfiniteDataSource } from '@/hooks/useInfiniteDataSource';
+import type { ColumnFiltersState } from '@/types/FilterDataTypes';
 
 export type DataGridProps<TData> = {
     datasource: TableDatasource<TData>;
