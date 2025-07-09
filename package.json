@@ -1,5 +1,5 @@
 {
-    "name": "grid-plus",
+    "name": "@muradley/grid-plus",
     "version": "0.1.0",
     "description": "Advanced DataGrid component built with React, TanStack Table, and shadcn/ui",
     "type": "module",

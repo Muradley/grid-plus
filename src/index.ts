@@ -3,7 +3,11 @@ import './types/ColumnTypes';
 export { DataGrid } from './components/datagrids/DataGrid';
 
 export type { DataGridProps } from './components/datagrids/DataGrid';
-export type { TableDatasource, GridOptions } from './types/DataSourceTypes';
+export type {
+    GetRowsParams,
+    TableDatasource,
+    GridOptions,
+} from './types/DataSourceTypes';
 
 export type { ColumnDef, SortingState } from '@tanstack/react-table';
 
